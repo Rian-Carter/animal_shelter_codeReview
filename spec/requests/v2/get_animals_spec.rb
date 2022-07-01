@@ -5,7 +5,7 @@ describe "get all animals route", :type => :request do
 
   before { get '/api/v2/animals'}
 
-  it 'returns all animals' do
+  it 'returns all paginated animals' do
     expect(JSON.parse(response.body).size).to eq(5)
   end
 
