@@ -31,5 +31,8 @@ class AnimalsController < ApplicationController
     end
   end
 
-  
+  private
+  def animal_params
+    params.permit(:species, :breed, :age, :name, :gender)
+  end
 end
