@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "post an animal route", :type => :request do
 
   before do
-    post '/animals', params: { :species => 'Dog', :breed => 'boxer', :age => 14, :name => 'Sadie', :gender => 'Female'}
+    post '/api/v1/animals', params: { :species => 'Dog', :breed => 'boxer', :age => 14, :name => 'Sadie', :gender => 'Female'}
   end
 
   it 'returns the animal name' do
@@ -31,7 +31,7 @@ describe "post an animal route", :type => :request do
   end
 
   it 'returns an 422 unprocessable entity status' do
-    post '/animals', params: { :breed => 'doxen', :age => 7 }  
+    post '/api/v1/animals', params: { :breed => 'doxen', :age => 7 }  
     expect(response).to have_http_status(:unprocessable_entity)
   end
 end

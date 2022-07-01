@@ -5,7 +5,7 @@ describe 'Delete animal route', :type => :request do
 
   before do
     @animal_id = Animal.first.id
-    delete "/animals/#{@animal_id}"
+    delete "/api/v1/animals/#{@animal_id}"
   end
 
   it 'returns a deleted success status message' do
@@ -17,7 +17,7 @@ describe 'Delete animal route', :type => :request do
   end
 
   it 'returns a 404 status not found' do
-    delete "/animals/1000"
+    delete "/api/v1/animals/1000"
     expect(response.status).to eq(404)
   end
 end

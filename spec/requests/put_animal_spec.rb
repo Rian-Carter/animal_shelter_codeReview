@@ -4,7 +4,7 @@ describe "update an animal route", :type => :request do
   let!(:animals) { FactoryBot.create_list(:animal, 20)}
 
   before do
-    put "/animals/#{Animal.first.id}", params: { :species => 'Dog', :breed => 'Boxer', :age => 14, :name => 'Sadie', :gender => 'Female'}
+    put "/api/v1/animals/#{Animal.first.id}", params: { :species => 'Dog', :breed => 'Boxer', :age => 14, :name => 'Sadie', :gender => 'Female'}
   end
 
   it 'returns status code 200' do
@@ -26,7 +26,7 @@ describe "update an animal route", :type => :request do
   it 'returns a 404 status not found' do
     @new_name = 'test'
     @new_breed = 'test breed'
-    put "/animals/12", params: {name: @new_name, breed: @new_breed}
+    put "/api/v1/animals/12", params: {name: @new_name, breed: @new_breed}
     expect(response.status).to eq(404)
   end
 end
