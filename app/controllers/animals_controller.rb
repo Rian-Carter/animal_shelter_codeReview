@@ -1,6 +1,7 @@
 class AnimalsController < ApplicationController
+  
   def index
-    @animals = Animal.AnimalsController
+    @animals = Animal.all
     json_response(@animals)
   end
 
@@ -18,7 +19,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     if @animal.update!(animal_params)
       render status: 200, json: {
-        message: "Created animal successfully."
+        message: "Updated animal successfully."
       }
     end
   end
