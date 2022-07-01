@@ -29,4 +29,11 @@ describe "post an animal route", :type => :request do
   it 'returns a created status' do
     expect(response).to have_http_status(:created)
   end
+
+  it 'returns an 422 unprocessable entity status' do
+    post '/animals', params: { :breed => 'doxen', :age => 7 }  
+    expect(response).to have_http_status(:unprocessable_entity)
+  end
+
+
 end
