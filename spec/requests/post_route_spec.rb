@@ -18,5 +18,8 @@ describe "post an animal route", :type => :request do
     expect(JSON.parse(response.body)['breed']).to eq('boxer')
   end
 
+  it 'returns the animal age' do
+    expect(JSON.parse(response.body)['age']).to eq(14)
+  end
 
 end
