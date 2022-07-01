@@ -14,4 +14,12 @@ describe "update an animal route", :type => :request do
   it 'returns updated status message' do
     expect(JSON.parse(response.body)['message']).to eq("Updated animal successfully.")
   end
+
+  it 'should have a new species, breed, age, name, and gender' do
+    expect(Animal.first.species).to eq('Dog')
+    expect(Animal.first.breed).to eq('Boxer')
+    expect(Animal.first.age).to eq(14)
+    expect(Animal.first.name).to eq('Sadie')
+    expect(Animal.first.gender).to eq('Female')
+  end
 end
