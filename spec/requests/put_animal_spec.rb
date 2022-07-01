@@ -22,4 +22,11 @@ describe "update an animal route", :type => :request do
     expect(Animal.first.name).to eq('Sadie')
     expect(Animal.first.gender).to eq('Female')
   end
+
+  it 'returns a 404 status not found' do
+    @new_name = 'test'
+    @new_breed = 'test breed'
+    put "/animals/12", params: {name: @new_name, breed: @new_breed}
+    expect(response.status).to eq(404)
+  end
 end
