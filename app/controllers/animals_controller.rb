@@ -23,5 +23,13 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def destroy
+    if @animal.destroy!
+      render status: 200, json: {
+        message: "Deleted animal successfully."
+      }
+    end
+  end
+
   
 end
