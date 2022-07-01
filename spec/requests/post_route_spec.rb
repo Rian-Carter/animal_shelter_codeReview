@@ -22,4 +22,8 @@ describe "post an animal route", :type => :request do
     expect(JSON.parse(response.body)['age']).to eq(14)
   end
 
+  it 'returns the animal gender' do
+    expect(JSON.parse(response.body)['gender']).to eq('Female')
+  end
+
 end
