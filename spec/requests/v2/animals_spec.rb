@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "animals API", :type => :request do
   let!(:animals) { FactoryBot.create_list(:animal, 20)}
 
-  describe 'Get /animals?page=3' do
+  describe 'Get /animals' do
     before do
       Animal.create(:species => 'Cat', :breed => "Tabby", :age => 14, :name => "Gary", :gender => "Female")
     end
