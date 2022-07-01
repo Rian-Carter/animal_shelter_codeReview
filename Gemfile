@@ -24,6 +24,7 @@ gem 'puma', '~> 3.11'
 
 # BEGIN ADDED GEMS
 gem 'faker'
+gem 'will_paginate', '~> 3.0'
 # END ADDED GEMS
 
 # Reduces boot times through caching; required in config/boot.rb
