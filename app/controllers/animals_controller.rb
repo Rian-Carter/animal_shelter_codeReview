@@ -4,5 +4,7 @@ class AnimalsController < ApplicationController
     json_response(@animals)
   end
 
-
+  def show
+    @animal = Animal.find(params[:id])
+    json_response(@animal)
 end
