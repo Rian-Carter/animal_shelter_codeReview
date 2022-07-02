@@ -58,12 +58,12 @@ production:
 ## Endpoint
 | Usage | Method | URL | Parameters |
 | :---: | :---: | :---: | :---: |
-| See All Animals | GET | `localhost:3000/api/v1/animals` |  |
+| See All Animals | GET | `localhost:3000/api/v1 *or* v2/animals` |  |
 | See 5 Animals at a time | GET | `localhost:3000/api/v2/animals?=page1` | :page |
-| Find Animal by ID | GET | `localhost:3000/api/v1/animals/:id` | :id |
-| Create an Animal | POST | `localhost:3000/api/v1/animals` | :species, :breed, :age, :name, :gender |
-| Update animal entry | PUT | `localhost:3000/api/v1/animals/:id` | :species, :breed, :age, :name, :gender |
-| Delete animal entry | DELETE | `localhost:3000/api/v1/animals/:id` | :id |
+| Find Animal by ID | GET | `localhost:3000/api/v1 *or* v2/animals/:id` | :id |
+| Create an Animal | POST | `localhost:3000/api/v1 *or* v2/animals` | :species, :breed, :age, :name, :gender |
+| Update animal entry | PUT | `localhost:3000/api/v1 *or* v2/animals/:id` | :species, :breed, :age, :name, :gender |
+| Delete animal entry | DELETE | `localhost:3000/api/v1 *or* v2/animals/:id` | :id |
 
 
 ## Known Bugs
