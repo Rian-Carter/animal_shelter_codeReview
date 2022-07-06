@@ -60,7 +60,7 @@ production:
 | :---: | :---: | :---: | :---: |
 | See All Animals | GET | `localhost:3000/api/v1/animals` |  |
 | See All Animals | GET | `localhost:3000/api/v2/animals` |  |
-| See 5 Animals at a time | GET | `localhost:3000/api/v2/animals?=page1` | :page |
+| See 5 Animals at a time | GET | `localhost:3000/api/v2/animals?page=1` | :page |
 | Find Animal by ID | GET | `localhost:3000/api/v1/animals/:id` | :id |
 | Find Animal by ID | GET | `localhost:3000/api/v2/animals/:id` | :id |
 | Create an Animal | POST | `localhost:3000/api/v1/animals` | :species, :breed, :age, :name, :gender |
